@@ -95,15 +95,15 @@ def findavgTime(processes, n, bt, quantum):
 # Driver code
 if __name__ =="__main__":
      
+    n = int(input('Ingrese la cantidad de procesos: '))
+    proc = [0] * n
+    burst_time = [0] * n
     # Process id's
-    proc = [1, 2, 3]
-    n = 3
+    for i in range(0, n):
+        proc[i] = i + 1
+        burst_time[i] = int(input('Ingrese el tiempo quemado del proceso #' + str(i + 1) + ': '))
+    quantum = int(input('Ingrese el preíodo cuántico de tiempo: '))
  
-    # Burst time of all processes
-    burst_time = [10, 5, 8]
- 
-    # Time quantum
-    quantum = 2;
     findavgTime(proc, n, burst_time, quantum)
  
 # This code is contributed by
